@@ -1,0 +1,17 @@
+@font-face {
+    font-family: TitilliumWebSemiBold;
+    src: url(fonts/TitilliumWeb/TitilliumWeb-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: TitilliumWebRegular;
+    src: url(fonts/TitilliumWeb/TitilliumWeb-Regular.ttf);
+}
+
+.font-titillium {
+    font-family: TitilliumWebRegular;
+}
+
+.font-titillium-semibold {
+    font-family: TitilliumWebSemiBold;
+}

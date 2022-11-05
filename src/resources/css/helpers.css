@@ -1,0 +1,17 @@
+/** Rounded **/
+.rounded-tl-xlg {
+    border-radius: 25px 0 25px 0;
+}
+
+.rounded-tl-2xlg {
+    border-radius: 35px 0 35px 0;
+}
+
+.rounded-tl-3xlg {
+    border-radius: 45px 0 45px 0;
+}
+
+/** Shadows **/
+.shadow-3xl {
+    box-shadow: 15px 20px 15px -5px var(--shadow-color-jv-auth);
+}

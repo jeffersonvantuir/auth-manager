@@ -1,0 +1,15 @@
+.bg-jv-auth {
+    background-color: var(--bg-jv-auth);
+}
+
+.focus\:border-color-jv-auth:focus {
+    border-color: var(--border-color-jv-auth);
+}
+
+.peer:focus~.peer-focus\:text-color-jv-auth {
+    color: var(--text-color-jv-auth);
+}
+
+.text-color-jv-btn-submit {
+    color: var(--text-color-jv-btn-submit);
+}

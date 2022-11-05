@@ -1,0 +1,19 @@
+{
+    "name": "jeffersonvantuir/auth-manager",
+    "description": "Autenticação para sistemas de jeffersonvantuir.com.br",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "JeffersonVantuir\\AuthManager\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jefferson Vantuir",
+            "email": "jefferson.behling@gmail.com"
+        }
+    ],
+    "require": {
+        "laravel/ui": "^4.0"
+    }
+}
