@@ -37,7 +37,7 @@
                         ></x-jv-auth-input>
                         @isset($errors)
                             @error('email')
-                                <input-error-component message="{{ $message }}"></input-error-component>
+                                <x-jv-auth-input-error message="{{ $message }}"></x-jv-auth-input-error>
                             @enderror
                         @endisset
                     </div>
@@ -51,7 +51,7 @@
                         ></x-jv-auth-input>
                         @isset($errors)
                             @error('password')
-                                <input-error-component message="{{ $message }}"></input-error-component>
+                                <x-jv-auth-input-error message="{{ $message }}"></x-jv-auth-input-error>
                             @enderror
                         @endisset
                     </div>
@@ -71,7 +71,7 @@
                     </div>
 
                     <div class="text-center pt-1 pb-1">
-                        <x-jv-btn-submit label="{{ __('Entrar') }}"></x-jv-btn-submit>
+                        <x-jv-auth-btn-submit label="{{ __('Entrar') }}"></x-jv-auth-btn-submit>
                     </div>
 
                     <div class="text-center">

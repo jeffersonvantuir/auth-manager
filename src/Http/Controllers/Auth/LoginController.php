@@ -2,6 +2,7 @@
 
 namespace JeffersonVantuir\AuthManager\Http\Controllers\Auth;
 
+use Flasher\Prime\Notification\NotificationInterface;
 use JeffersonVantuir\AuthManager\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -22,10 +23,15 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         if ($request->isMethod(Request::METHOD_POST)) {
+            $validateMessages = [
+                'email.required' => __('E-mail é obrigatório'),
+                'email.email' => __('E-mail inválido'),
+                'password.required' => __('Senha é obrigatória'),
+            ];
             $credentials = $request->validate([
-                'usuario' => ['required', 'email'],
+                'email' => ['required', 'email'],
                 'password' => ['required'],
-            ]);
+            ], $validateMessages);
      
             if (Auth::attempt($credentials)) {
                 $request->session()->regenerate();
@@ -33,9 +39,9 @@ class LoginController extends Controller
                 return redirect()->intended(config('jv-auth-config.success_login_redirect', 'home'));
             }
 
-            return back()->withErrors([
-                'email' => 'The provided credentials do not match our records.',
-            ])->onlyInput('email');
+            toastr(__('Credenciais não encontradas'), NotificationInterface::ERROR);
+
+            return back()->onlyInput('email');
         }
 
         return view('jv-auth::auth.login');

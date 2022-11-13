@@ -40,4 +40,4 @@ Para realizar a customização dos estilos css, podemos alterar as cores no arqu
 |`--shadow-color-jv-auth` |`#0000007a` |Cor da sombra do card de login|
 |`--border-color-jv-auth` |`#40e9df` |Cor da borda dos inputs|
 |`--text-color-jv-auth` |`#40e9df` |Cor do label dos inputs|
-|`--text-color-jv-btn-submit` |`#30607e` |Cor do texto do botão de enviar|
+|`--text-color-jv-auth-btn-submit` |`#30607e` |Cor do texto do botão de enviar|

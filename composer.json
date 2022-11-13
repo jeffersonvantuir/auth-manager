@@ -2,6 +2,7 @@
     "name": "jeffersonvantuir/auth-manager",
     "description": "Autenticação para sistemas de jeffersonvantuir.com.br",
     "type": "library",
+    "keywords": ["laravel", "login"],
     "autoload": {
         "psr-4": {
             "JeffersonVantuir\\AuthManager\\": "src/"
@@ -14,6 +15,8 @@
         }
     ],
     "require": {
-        "laravel/ui": "^4.0"
+        "laravel/ui": "4.*",
+        "php-flasher/flasher-toastr-laravel": "1.*",
+        "php-flasher/flasher": "1.*"
     }
 }

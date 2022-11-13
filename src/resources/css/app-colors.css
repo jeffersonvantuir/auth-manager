@@ -10,6 +10,6 @@
     color: var(--text-color-jv-auth);
 }
 
-.text-color-jv-btn-submit {
-    color: var(--text-color-jv-btn-submit);
+.text-color-jv-auth-btn-submit {
+    color: var(--text-color-jv-auth-btn-submit);
 }
