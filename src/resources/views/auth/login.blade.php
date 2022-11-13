@@ -4,8 +4,11 @@
 
 @section('content')
 <section class="container-full md:h-screen grid-none grid place-content-around"
-    style="background-image: url(<?= asset(config('jv-auth-config.login_background')) ?>);"
->
+    style="
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(<?= asset(config('jv-auth-config.login_background')) ?>);"
+    >
     <div class="bg-jv-auth rounded-tl-3xlg rounded-br-3xlg shadow-3xl">
     
         <div class="relative flex items-center place-content-center mb-6">
