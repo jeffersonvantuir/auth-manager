@@ -9,10 +9,10 @@
     <div class="bg-jv-auth rounded-tl-3xlg rounded-br-3xlg shadow-3xl">
     
         <div class="relative flex items-center place-content-center mb-6">
-            <div class="p-4 shadow-sm bg-white rounded-lg absolute">
+            <div class="p-4 shadow-sm bg-white w-20 rounded-lg absolute">
                 <div class="flex justify-center">
                     <a href="{{ config('app.url') }}">
-                        <img class="w-8 h-12" alt="Login logo" src="{{ asset(config('jv-auth-config.login_logo')) }}"/>
+                        <img alt="Login logo" src="{{ asset(config('jv-auth-config.login_logo')) }}"/>
                     </a>
                 </div>
             </div>

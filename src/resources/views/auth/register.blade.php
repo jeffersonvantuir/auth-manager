@@ -10,10 +10,10 @@
            
                 <div class="flex justify-center mb-10">
                     <div class="relative flex items-center place-content-center">
-                        <div class="p-4 shadow-sm bg-white rounded-lg absolute">
+                        <div class="p-4 shadow-sm bg-white w-20 rounded-lg absolute">
                             <div class="flex justify-center">
                                 <a href="{{ route('welcome') }}">
-                                    <img class="w-8 h-12" alt="Logo" src="{{ asset('images/only-logo.png') }}"/>
+                                    <img alt="Logo" src="{{ asset('images/only-logo.png') }}"/>
                                 </a>
                             </div>
                         </div>
