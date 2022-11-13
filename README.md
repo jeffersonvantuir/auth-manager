@@ -1,6 +1,6 @@
 # Auth Manager
 
-Pacote utilizado para agilizar o desenvolvimento de inferfaces de autenticação desenvolvidos por jeffersonvantuir.com.br.
+Pacote laravel utilizado para agilizar o desenvolvimento de inferfaces de autenticação desenvolvidos por jeffersonvantuir.com.br.
 
 Para realizar a instalação, basta executar o comando abaixo:
 
