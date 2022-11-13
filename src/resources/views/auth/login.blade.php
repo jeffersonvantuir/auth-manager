@@ -9,10 +9,10 @@
     <div class="bg-jv-auth rounded-tl-3xlg rounded-br-3xlg shadow-3xl">
     
         <div class="relative flex items-center place-content-center mb-6">
-            <div class="p-4 shadow-sm bg-white w-20 h-20 rounded-lg absolute">
+            <div class="p-4 shadow-sm bg-white rounded-lg absolute">
                 <div class="flex justify-center">
                     <a href="{{ config('app.url') }}">
-                        <img class="w-8 h-12" src="{{ asset(config('jv-auth-config.login_logo')) }}"/>
+                        <img class="w-8 h-12" alt="Login logo" src="{{ asset(config('jv-auth-config.login_logo')) }}"/>
                     </a>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                     @csrf
                     
                     <div class="mb-4">
-                        <x-jv-auth-input 
+                        <x-jv-auth-input
                             id="email"
                             type="email"
                             name="email"
@@ -39,7 +39,7 @@
                         @endisset
                     </div>
                     <div class="mb-4">
-                        <x-jv-auth-input 
+                        <x-jv-auth-input
                             id="password"
                             type="password"
                             name="password"

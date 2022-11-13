@@ -10,10 +10,10 @@
            
                 <div class="flex justify-center mb-10">
                     <div class="relative flex items-center place-content-center">
-                        <div class="p-4 shadow-sm bg-white w-20 h-20 rounded-lg absolute">
+                        <div class="p-4 shadow-sm bg-white rounded-lg absolute">
                             <div class="flex justify-center">
                                 <a href="{{ route('welcome') }}">
-                                    <img class="w-8 h-12" src="{{ asset('images/only-logo.png') }}"/>
+                                    <img class="w-8 h-12" alt="Logo" src="{{ asset('images/only-logo.png') }}"/>
                                 </a>
                             </div>
                         </div>
@@ -28,7 +28,7 @@
                             @csrf
                             
                             <div class="mb-4">
-                                <input-component 
+                                <input-component
                                     id="name"
                                     type="text"
                                     name="name"
@@ -42,7 +42,7 @@
                             </div>
 
                             <div class="mb-4">
-                                <input-component 
+                                <input-component
                                     id="email"
                                     type="email"
                                     name="email"
@@ -56,7 +56,7 @@
                             </div>
 
                             <div class="mb-4">
-                                <input-component 
+                                <input-component
                                     id="password"
                                     type="password"
                                     name="password"
@@ -71,7 +71,7 @@
                             </div>
 
                             <div class="mb-4">
-                                <input-component 
+                                <input-component
                                     id="password-confirm"
                                     type="password"
                                     name="password_confirmation"
