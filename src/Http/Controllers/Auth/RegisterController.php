@@ -3,34 +3,16 @@
 namespace JeffersonVantuir\AuthManager\Http\Controllers\Auth;
 
 use JeffersonVantuir\AuthManager\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
 use App\Models\User;
-use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class RegisterController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Register Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles the registration of new users as well as their
-    | validation and creation. By default this controller uses a trait to
-    | provide this functionality without requiring any additional code.
-    |
-    */
-
-    use RegistersUsers;
-
-    /**
-     * Where to redirect users after registration.
-     *
-     * @var string
-     */
-    protected $redirectTo = RouteServiceProvider::HOME;
-
     /**
      * Create a new controller instance.
      *
@@ -39,6 +21,29 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+
+    public function register(Request $request)
+    {
+        if ($request->isMethod(Request::METHOD_POST)) {
+
+            $this->validator($request->all())
+                ->validate();
+
+            event(new Registered($user = $this->create($request->all())));
+    
+            Auth::guard()->login($user);
+    
+            if ($response = $this->registered($request, $user)) {
+                return $response;
+            }
+    
+            return $request->wantsJson()
+                ? new JsonResponse([], 201)
+                : redirect(config('jv-auth-config.success_login_redirect'));
+        }
+
+        return view('jv-auth::auth.register');
     }
 
     /**

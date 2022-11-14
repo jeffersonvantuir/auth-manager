@@ -75,8 +75,8 @@
                     </div>
 
                     <div class="text-center">
-                        @if (Route::has('register'))
-                            <a class="text-white font-2xl font-titillium-semibold" href="{{ route('register') }}">
+                        @if (Route::has('auth.register'))
+                            <a class="text-white font-2xl font-titillium-semibold" href="{{ route('auth.register') }}">
                                 {{ __('Cadastrar') }}
                             </a>
                         @endif

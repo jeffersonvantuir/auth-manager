@@ -41,3 +41,16 @@ Para realizar a customização dos estilos css, podemos alterar as cores no arqu
 |`--border-color-jv-auth` |`#40e9df` |Cor da borda dos inputs|
 |`--text-color-jv-auth` |`#40e9df` |Cor do label dos inputs|
 |`--text-color-jv-auth-btn-submit` |`#30607e` |Cor do texto do botão de enviar|
+
+## Configurações do ambiente
+É possível realizar algumas customizações alterando variáveis de ambiente definidas no arquivo `jv-auth-config.php`.
+
+| Propriedade |Cor padrão|Descrição
+|----------------|-------------------------------|-------------------------------|
+|`JV_AUTH_LOGIN_LOGO_PATH`|`jeffersonvantuir/auth-manager/images/login-logo.png` |Logo da tela de login|
+|`JV_AUTH_LOGIN_BACKGROUND_PATH` |`jeffersonvantuir/auth-manager/images/background-login.png` |Imagem de fundo da tela de login|
+|`JV_AUTH_SUCCESS_LOGIN_REDIRECT` |`home` |Alias da rota pós autenticar|
+|`JV_AUTH_LOGOUT_REDIRECT` |`/` |Path da rota redirecionada pós logout|
+|`JV_AUTH_LOGIN_ROUTE` |`/entrar` |Path para rota de login|
+|`JV_AUTH_ALLOW_EXTERNAL_REGISTER_ROUTE` |`true` |Define se permite realizar cadastro externo (na tela de login)|
+|`JV_AUTH_REGISTER_ROUTE` |`/cadastro` |Path da rota de cadastro externo|
